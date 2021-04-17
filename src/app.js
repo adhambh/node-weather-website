@@ -5,7 +5,7 @@ const forecast = require('./utils/forecast')
 const hbs = require('hbs',) //this to hbs and configure it , the secons part is telling the handle bar where are our partials
 const app = express()
 
-
+const port = process.env.PORT || 3000
 
 // define path for express config:
 
@@ -138,6 +138,6 @@ app.get('/weather', (req, res) => {
 
     //  this method start up the server and liten on the port
 
-    app.listen(3000, () => {
-        console.log('server isrunning on port 3000')
+    app.listen(port, () => {
+        console.log('server is running on port'+ port)
     })
