@@ -22,8 +22,8 @@ if (error) {
 } else if (body.error){
     callback('wrong entry', undefined)
 }else{
-    callback(undefined, body.name + ': temp is : ' +  Math.floor(body.main.temp) + ' and it feels like: ' + Math.floor(body.main.feels_like)
-    )
+    callback(undefined, body.name + ': temp is : ' +  Math.floor(body.main.temp) + ' and it feels like: ' + Math.floor(body.main.feels_like) + ' and expected min temp is : ' + Math.floor(body.main.temp_min) + ', and max temp is : ' + Math.floor(body.main.temp_max))
+    
 }
 })
 
